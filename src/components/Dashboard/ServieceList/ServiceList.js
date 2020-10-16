@@ -33,7 +33,7 @@ const ServiceList = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/readorder?email='+loggedInUser.email)
+        fetch('https://cryptic-anchorage-36092.herokuapp.com/readorder?email='+loggedInUser.email)
         .then(res => res.json())
         .then(result=> setOrder(result))
 

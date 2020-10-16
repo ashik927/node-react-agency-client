@@ -23,7 +23,7 @@ const Makeadmin = () => {
                                     Name
                             </div>
                             </div>
-                            <form action="http://localhost:5000/addadmin" method="POST" className="offset-2 col-12">
+                            <form action="https://cryptic-anchorage-36092.herokuapp.com/addadmin" method="POST" className="offset-2 col-12">
                                 <div className="form-group">
                                     <input type="email" name="email" className="form-control" placeholder="Enter Email" />
                                 </div>

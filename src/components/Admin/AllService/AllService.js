@@ -8,7 +8,7 @@ const containerStyle = {
 const AllService = () => {
     const[service , setService] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/readallservice')
+        fetch('https://cryptic-anchorage-36092.herokuapp.com/readallservice')
         .then(res => res.json())
         .then(result=> setService(result))
 

@@ -31,7 +31,7 @@ const ClientFeedback = () => {
     const[review , setReview] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/readreview')
+        fetch('https://cryptic-anchorage-36092.herokuapp.com/readreview')
         .then(res => res.json())
         .then(result=> setReview(result))
 

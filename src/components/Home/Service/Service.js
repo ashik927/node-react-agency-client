@@ -22,7 +22,7 @@ const serviceData = [
 const Services = () => {
     const [service , setService] =useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/homeserviceshow')
+        fetch('https://cryptic-anchorage-36092.herokuapp.com/homeserviceshow')
         .then(res => res.json())
         .then(result=> setService(result))
 

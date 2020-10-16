@@ -23,7 +23,7 @@ const OrderForm = () => {
         formData.append('email', info.email);
         formData.append('price', info.price);
         formData.append('description', info.description);
-        fetch('http://localhost:5000/addorder', {
+        fetch('https://cryptic-anchorage-36092.herokuapp.com/addorder', {
           method: 'POST',
           body: formData
         })

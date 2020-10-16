@@ -6,7 +6,7 @@ const AllReview = () => {
     const [loggedInUser,setLoggedInUser] = useContext(UserContext);
     return (
         <div>
-             <form action="http://localhost:5000/addreview" method="POST">
+             <form action="https://cryptic-anchorage-36092.herokuapp.com/addreview" method="POST">
                 <div className="form-group">
                     <input type="text" name="name"  className="form-control" placeholder="You Name" />
                 </div>

@@ -20,7 +20,7 @@ const AddAdminService = () => {
         formData.append('file', file);
         formData.append('name', info.name);
         formData.append('description', info.description);
-        fetch('http://localhost:5000/addservice', {
+        fetch('https://cryptic-anchorage-36092.herokuapp.com/addservice', {
           method: 'POST',
           body: formData
         })
