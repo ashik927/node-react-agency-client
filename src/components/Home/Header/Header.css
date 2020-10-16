@@ -1,0 +1,13 @@
+.bgCurve
+    {
+        position: relative;
+        height: 620px;
+        background-image: linear-gradient(#FBD062 , #FBD062);
+      }
+.bgCurve svg {
+   position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 15vw;
+  /* set height to pixels if you want angle to change with screen width */
+}

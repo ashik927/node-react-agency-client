@@ -1,0 +1,14 @@
+.navBtn{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+}
+.navbar{
+    overflow: hidden;
+    border:none;
+    box-shadow: none;
+}
+
+.homeNav{
+    border-bottom:3px solid green;
+}
