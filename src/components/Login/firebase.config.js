@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAaJU2bSNDMnmuLrt2Ac730WMjrpZajLuQ",
-    authDomain: "volunteer-network-ashik.firebaseapp.com",
-    databaseURL: "https://volunteer-network-ashik.firebaseio.com",
-    projectId: "volunteer-network-ashik",
-    storageBucket: "volunteer-network-ashik.appspot.com",
-    messagingSenderId: "186555196865",
-    appId: "1:186555196865:web:579fca3fdf832f9de4fb40"
-  };
+  apiKey: "AIzaSyCRBmp8tcjpUKED7ZPmiabA3D8MwVRfXWg",
+  authDomain: "agency-ashik.firebaseapp.com",
+  databaseURL: "https://agency-ashik.firebaseio.com",
+  projectId: "agency-ashik",
+  storageBucket: "agency-ashik.appspot.com",
+  messagingSenderId: "953094115065",
+  appId: "1:953094115065:web:0ffde433c3823c5cf75c28"
+};
   export default firebaseConfig;
