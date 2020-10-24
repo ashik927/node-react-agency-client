@@ -50,7 +50,7 @@ const ServiceList = () => {
                             Order
                             </div>
                         <div className="ml-auto">
-                            Name
+                            {loggedInUser.name}
                             </div>
                     </div>
                     {

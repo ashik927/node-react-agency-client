@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import AddAdminService from './AddAdminService';
 const containerStyle = {
     backgroundColor: "#F4FDFB",
 }
 const AddService = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+
     return (
         <div>
             <div>
@@ -19,7 +22,7 @@ const AddService = () => {
                                Add Service
                             </div>
                             <div className="ml-auto">
-                                Name
+                                {loggedInUser.name}
                             </div>
                         </div>
                         <AddAdminService></AddAdminService>

@@ -7,6 +7,7 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
     import carousel4 from '../../../images/carousel-4.png';
     import carousel5 from '../../../images/carousel-5.png';
     import {Carousel} from '3d-react-carousal';
+import { useLocation } from 'react-router-dom';
 
     let slides = [
         <img  src={carousel1} height="300vh"
@@ -21,6 +22,7 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
         width="100%"alt="5" />   ];
 
 const Carosol = () => {
+    
     return (
        <div style={{ backgroundColor:"#111430", height:"500px" }} class="mt-5  pt-5">
            <h1 className="text-center" style={{color: "white"}}>Here are some of  <span style={{color: '#7AB259'}}>our works</span> </h1>

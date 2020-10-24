@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import AllReview from '../AllReview/AllReview';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -6,6 +7,8 @@ const containerStyle = {
     backgroundColor: "#F4FDFB",
 }
 const Review = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+
     return (
         <div>
             <div>
@@ -17,10 +20,10 @@ const Review = () => {
                         <div className="col-md-7 col-sm-6 col-12 ml-5">
                             <div className="row mb-5 mt-5">
                                 <div className="ml-3">
-                                    Order
+                                    review
                             </div>
                                 <div className="ml-auto">
-                                    Name
+                                    {loggedInUser.name}
                             </div>
                             </div>
                             <AllReview></AllReview>

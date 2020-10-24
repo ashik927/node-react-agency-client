@@ -1,7 +1,10 @@
 import React from 'react';
 import './ServiceDetail.css'
+import {useSpring, animated} from 'react-spring'
 
 const ServiceDetail = ({ service }) => {
+    const props = useSpring({opacity: 1, from: {opacity: 0}})
+
     return (
         <div className="col-md-4 text-center serviceStyle">
             <img style={{height: '50px'}} src={`data:image/png;base64,${service.image.img}`} alt="" />

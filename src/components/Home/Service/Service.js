@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import fluoride from '../../../images/icons/service1.png';
 import cavity from '../../../images/icons/service2.png';
 import whitening from '../../../images/icons/service3.png';
@@ -27,6 +28,8 @@ const Services = () => {
         .then(result=> setService(result))
 
     },[])
+
+   
     return (
         <section className="services-container mt-5 pt-5">
             <div className="text-center">

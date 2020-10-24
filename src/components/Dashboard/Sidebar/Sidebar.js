@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faSignOutAlt, faLock, faEnvelope, faGripHorizontal, faUserPlus, faUsers } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ import logo from '../../../images/logos/logo.png';
 const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isAdmin, setAdmin] = useState(false);
-
+    const location = useLocation();
     useEffect(() => {
         fetch('https://cryptic-anchorage-36092.herokuapp.com/isAdmin', {
             method: 'POST',
@@ -24,7 +24,7 @@ const Sidebar = () => {
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
             <ul className="list-unstyled">
            <div className="mb-5">
-           <img src={logo} class="img-fluid" height="100px" width="100px"></img>
+          <Link to="/"> <img src={logo} class="img-fluid" height="100px" width="100px"></img></Link>
            </div>
            {isAdmin  ?<div>
                 <li>

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import OrderForm from '../OrderForm/OrderForm';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -7,6 +8,8 @@ const containerStyle = {
 }
 
 const Dashboard = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+
     return (
         <div>
             <section>
@@ -20,7 +23,7 @@ const Dashboard = () => {
                                 Order
                             </div>
                             <div className="ml-auto">
-                                Name
+                                {loggedInUser.name}
                             </div>
                         </div>
                         <OrderForm></OrderForm>

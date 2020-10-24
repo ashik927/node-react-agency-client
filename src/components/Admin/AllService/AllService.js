@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 import ShowAllService from './ShowAllService';
 
@@ -6,6 +7,8 @@ const containerStyle = {
     backgroundColor: "#F4FDFB",
 }
 const AllService = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+
     const[service , setService] = useState([]);
     useEffect(()=>{
         fetch('https://cryptic-anchorage-36092.herokuapp.com/readallservice')
@@ -28,7 +31,7 @@ const AllService = () => {
                                         Service List
                             </div>
                                     <div className="ml-auto">
-                                        Admin
+                                        {loggedInUser.name}
                             </div>
                                 </div>
                                 <table class="table table-striped">

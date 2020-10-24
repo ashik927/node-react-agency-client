@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import './Contact.css';
 const OrderForm = () => {
     const [info , setInfo] = useState({});
     const [file, setFile] = useState(null);
+    const history = useHistory()
 
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
@@ -15,8 +17,10 @@ const OrderForm = () => {
         setInfo(newInfo);
     }
 
-    const handleSubmit=() => {
-
+    const handleSubmit=(e) => {
+        e.preventDefault();
+        alert("submitted");
+        history.push("servicelist")
         const formData = new FormData()
         formData.append('file', file);
         formData.append('name', info.name);

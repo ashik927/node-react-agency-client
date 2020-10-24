@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { UserContext } from '../../../App';
 import Sidebar from '../../Dashboard/Sidebar/Sidebar';
 const containerStyle = {
     backgroundColor: "#F4FDFB",
@@ -6,6 +7,8 @@ const containerStyle = {
 }
 
 const Makeadmin = () => {
+    const [loggedInUser,setLoggedInUser] = useContext(UserContext);
+
     return (
         <div>
             <div>
@@ -20,7 +23,7 @@ const Makeadmin = () => {
                                     Service
                             </div>
                                 <div className="ml-auto">
-                                    Name
+                                    {loggedInUser.name}
                             </div>
                             </div>
                             <form action="https://cryptic-anchorage-36092.herokuapp.com/addadmin" method="POST" className="offset-2 col-12">

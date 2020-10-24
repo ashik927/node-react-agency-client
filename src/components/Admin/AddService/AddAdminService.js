@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const AddAdminService = () => {
     const [info , setInfo] = useState({});
     const [file, setFile] = useState(null);
+    const history = useHistory();
 
     const handleFileChange = (e) => {
         const newFile = e.target.files[0];
@@ -14,9 +16,11 @@ const AddAdminService = () => {
         setInfo(newInfo);
     }
 
-    const handleSubmit=() => {
-
+    const handleSubmit=(e) => {
+        e.preventDefault();
         const formData = new FormData()
+        alert("submitted");
+        history.push("/")
         formData.append('file', file);
         formData.append('name', info.name);
         formData.append('description', info.description);
